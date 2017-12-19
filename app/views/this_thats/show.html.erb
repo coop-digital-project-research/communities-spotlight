@@ -5,16 +5,14 @@
     <fieldset class="polar-choice">
       <p>I want to...</p>
       <div class="choice">
-        <div>
-          <%= f.radio_button question[:name], 't' %>
-          <%= f.label :"#{question[:name]}_t" do %>
-            <%= question[:left][:name] %>
+        <div id="this">
+          <%= radio_button_tag :pairing, "this" %>
+          <%= label_tag :pairing_this do %>
           <% end %>
         </div>
-        <div>
-          <%= f.radio_button question[:name], 'f' %>
-          <%= f.label :"#{question[:name]}_f" do %>
-            <%= question[:right][:name] %>
+        <div id="that">
+          <%= radio_button_tag "pairing", "that" %>
+          <%= label_tag :pairing_that do %>
           <% end %>
         </div>
       </div>
@@ -22,5 +20,4 @@
     </fieldset>
   <% end %>
 
-  <%= f.submit 'Next', class: 'btn btn-primary' %>
 <% end %>
