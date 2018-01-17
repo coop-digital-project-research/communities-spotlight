@@ -23,6 +23,7 @@ class ActivitiesController < ApplicationController
     @ups = @submission.interests.thumbs_up.count
     @downs = @submission.interests.thumbs_down.count
     @unseens = @submission.interests.unseen.count
+    @all_interests = @ups + @downs + @unseens
   end
 
   def create

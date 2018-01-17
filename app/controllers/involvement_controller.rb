@@ -13,7 +13,7 @@ class InvolvementController < ApplicationController
       if @submission.member.anonymous?
         redirect_to submission_postcode_path(@submission)
       else
-        redirect_to submission_distance_path(@submission)
+        redirect_to new_submission_activity_path(@submission)
       end
     else
       render :show
