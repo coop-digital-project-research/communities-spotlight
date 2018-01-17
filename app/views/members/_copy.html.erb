@@ -1,43 +1,65 @@
-<h1>Make something good happen in your neighbourhood</h1>
-
-<h2>
-  Neighbourhoods are better when people play, learn and work together.
-</h2>
-
-<p>
-  Connect with people in your neighbourhood to make it a place to be proud of. And if there’s already something good going on, get help to get involved.
-<p>
-  Ready to make something good?
-</p>
-
-<%= render 'form', get_started_path: get_started_path %>
-
-<section class="feature play">
+<header id="proposition-head">
+  <h1>Make something good happen in&nbsp;your neighbourhood</h1>
+  <h2>
+    Connect to like-minded people in your&nbsp;area
+  </h2>
+</header>
+<section id="proposition-intro">
   <p>
-    Imagine organising a fun run with your neighbours, or closing your road for street sports day.
-  </p>
-  <img src="<%= image_path 'play.svg' %>" alt="Play with your neighbours">
+    Tell us what you want to do in your neighbourhood, and we’ll find other people nearby who share your vision.
+    <p>
+    <p>
+      We can help you come together to set up a group or club, or organise an event.
+    </p>
 </section>
 
-<section class="feature learn">
-  <p>
-    Could you help someone learn how to do a thing that comes easily to you? Or pick up a new skill - and make a new friend while you’re at it?
-  </p>
-  <img src="<%= image_path 'learn.svg' %>" alt="Learn with your neighbours">
+<section id="how-it-works">
+  <div>
+    <img src="<%= image_path 'like-not-like.svg' %>" alt="Co-op">
+    <p>
+      Tell us what you want to do and where you want to do it
+    </p>
+  </div>
+  <div>
+    <img src="<%= image_path 'contact-info.svg' %>" alt="Co-op">
+    <p>
+      Give us your contact details
+    </p>
+  </div>
+  <div>
+    <img src="<%= image_path 'others.svg' %>" alt="Co-op">
+    <p>
+      We’ll put you in touch with people nearby who want the same things
+    </p>
+  </div>
 </section>
 
-<section class="feature work">
-  <p>
-    If your street came together to fix one thing in your area that’s bothering you, what would that be?
-  </p>
-  <img src="<%= image_path 'work.svg' %>" alt="Work with your neighbours">
+<section id="neighbourhood-map">
+
+  <div class="neighbourhood-where">
+    <%= form_tag get_started_path do %>
+      <% if flash[:error] %>
+        <p class="message message-error"><%= flash[:error] %></p>
+      <% end %>
+      <h2>
+        Where do you want to make something happen?
+      </h2>
+      <p>
+        What is your community or neighbourhood? It doesn’t have to be where you live - it’s the place you have a connection to, that you care about and want good things for.
+      </p>
+      <%= text_field_tag :location %>
+      <p class="helper-text">
+        We’ll use this information to look for people nearby. We’ll always get your permission before sharing any contact details. We’ll also be in touch with you to find out more about how we can help.
+      </p>
+      <%= submit_tag "Get started", class: 'btn btn-primary'%>
+    <% end %>
+  </div>
+
 </section>
 
-<footer>
+<footer id="why-coop">
   <h2>Why Co-op?</h2>
   <p>
     Co-op has always stood for self-help and solidarity. It’s our job to find new ways to support people, so that they can build a better world - for themselves.
   </p>
 </footer>
-
-<%= render 'form', get_started_path: get_started_path %>
