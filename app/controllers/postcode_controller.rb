@@ -10,7 +10,7 @@ class PostcodeController < ApplicationController
     @form = PostcodeForm.new(params.require(:submission).to_unsafe_h)
     if @form.valid?
       @submission.member.update!(postcode: @form.postcode)
-      redirect_to submission_distance_path(@submission)
+      redirect_to submission_activities_path(@submission)
     else
       render :show
     end
