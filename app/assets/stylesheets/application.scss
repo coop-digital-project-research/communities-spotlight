@@ -24,8 +24,19 @@ $base-thumb: #2E4834;
 $base-oregon: #9e3705;
 $base-tan: #610F1A;
 
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 100%;
+}
+
 section {
   &.cta {
+    img {
+      &.assistant-avatar {
+        @extend .avatar;
+      }
+    }
     position: relative;
     border-radius: 0.2rem;
     background: $offwhite;
@@ -36,7 +47,7 @@ section {
       padding: 8rem 2rem;
       margin: 4rem 0;
     }
-    img {
+    > img {
       position: absolute;
       z-index: 0;
       left: 0;
@@ -288,9 +299,7 @@ body.recommendations-page {
       justify-content: space-between;
       margin-bottom: 2rem;
       img {
-        width: 72px;
-        height: 72px;
-        border-radius: 100%;
+        @extend .avatar;
       }
       div {
         padding-left: 1rem;
