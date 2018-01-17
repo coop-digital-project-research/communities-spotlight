@@ -1,22 +1,30 @@
 <h1>
-  One last thing
+  Meet your assistant
 </h1>
-
-<p>
-  Let us know your name and email address and we will be in touch with things you can get involved with in your neighbourhood.
-</p>
-
-<ul>
-  <%@submission.interests.thumbs_up.each do | interest | %>
-  <li>
-    <%=interest.activity.name%>
-  </li>
-  <%end%>
-</ul>
 
 <section class="cta">
   <img src="<%= image_path 'bunting.svg' %>" alt="Bunting">
   <form id="join-form-1" action="https://docs.google.com/forms/d/e/1FAIpQLSf9_COdZQmL8v5JuhkBOhk7dSRENeMNF-CMTv073OE69FXiaw/formResponse" method="post">
+
+    <p>
+      Hi, I'm James!
+    </p>
+    <p>
+      So you want to get more involved with your neighbournood? I'll start finding ways for you to:
+    </p>
+
+    <ul>
+      <%@submission.interests.thumbs_up.each do | interest | %>
+      <li>
+        <%=interest.activity.name%>
+      </li>
+      <%end%>
+    </ul>
+
+    <p>
+      Leave your contact details with me and I'll be in touch very shortly.
+    </p>
+
     <label for="name">Your name</label>
     <input id="name" type="text" name="entry.2140969632" value="" required><br />
 
