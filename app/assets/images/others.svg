@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="120px" viewBox="0 0 200 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>others</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="200" height="120" rx="4"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="others">
+            <g id="Group-5-Copy-4">
+                <g id="Group-6">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#385C0A" xlink:href="#path-1"></use>
+                    <g mask="url(#mask-2)" fill="#BAD303">
+                        <g transform="translate(11.000000, 7.000000)">
+                            <circle id="Oval-5-Copy-4" cx="71" cy="25" r="25"></circle>
+                            <circle id="Oval-5-Copy-5" cx="138" cy="50" r="19"></circle>
+                            <circle id="Oval-5-Copy-6" cx="71" cy="100" r="47"></circle>
+                            <circle id="Oval-5-Copy-7" cx="24" cy="51" r="13"></circle>
+                            <circle id="Oval-5-Copy-8" cx="34" cy="101" r="34"></circle>
+                            <circle id="Oval-5-Copy-9" cx="125" cy="110" r="36"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
