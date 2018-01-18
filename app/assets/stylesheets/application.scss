@@ -341,7 +341,13 @@ body.proposition-page {
       }
       p {
         font-family:"AvenirNextLTW01-Medium";
-        padding-right: 2rem;
+        @media (max-width: 720px) {
+          font-size: 0.8rem;
+        }
+        @media (min-width: 720px) {
+          padding-right: 2rem;
+          
+        }
       }
     }
   }
