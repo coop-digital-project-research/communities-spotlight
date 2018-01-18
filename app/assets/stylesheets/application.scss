@@ -348,6 +348,8 @@ body.proposition-page {
 
   section#neighbourhood-map {
     background-image: image-url("leeds-map.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 1rem;
     margin-bottom: 4rem;
     @media (min-width: 720px) {
