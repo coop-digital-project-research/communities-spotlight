@@ -1,12 +1,18 @@
 <section id="activities-intro">
-  <h1>TODO: We're going to show you....</h1>
+  <h1>We're going to show you a list of activities you could do in your neighbourhood</h1>
+  <p>
+    Pick the activities that you'd like to do with other people in your neighbourhood. We'll use this information you to connect people who care about the same things.
+  </p>
+
+  <p>
+    If you pick something that's happening already, we'll help you get involved. If it's not happening, we'll help you get something started.
+  </p>
   <button class='btn btn-primary'>Next</button>
 </section>
 
 <section id="activities-actions">
   <%= form_for @submission, url: submission_activities_path(@submission), method: :put do |f| %>
-    <h1>What sort of things would you like to do?</h1>
-    <p class="begin-statement">I would like to...</p>
+    <h1>Get introduced to people in your area to &hellip;</h1>
     <%= f.fields_for :interests, @interests do |interest_fields| %>
       <fieldset class="thumbs-up-down">
         <%= interest_fields.hidden_field :position %>
@@ -16,7 +22,6 @@
             <%= interest_fields.object.activity.name %>
           </p>
         </div>
-        <p class="end-statement">... with people in my neighbourhood</p>
         <div class="thumbs-up-down-choice">
           <%= interest_fields.label :response_yes, '👍' %>
           <%= interest_fields.radio_button :response, 'yes' %>
