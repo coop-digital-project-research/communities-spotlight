@@ -352,6 +352,7 @@ body.proposition-page {
     background-size: cover;
     padding: 1rem;
     margin-bottom: 4rem;
+    border-radius: 0.4rem;
     @media (min-width: 720px) {
       padding: 4rem 2rem;
       margin-left: -4rem;
@@ -361,6 +362,7 @@ body.proposition-page {
       background: $white;
       padding: 1rem;
       max-width: 28rem;
+      border-radius: 0.2rem;
       @media (min-width: 720px) {
         margin-left: 2rem;
         padding: 2rem;
