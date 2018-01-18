@@ -14,18 +14,13 @@ class IntercomSubmission
         email: form.email,
         custom_attributes: {
           latest_submission: submission.uuid,
-          location: submission.location,
-          involvement: submission.involvement,
+          location: submission.location.to_s,
+          involvement: submission.involvement.to_s,
           activity_suggestion: submission.activity_suggestion
         }.merge(submission_interests)
       }
-      if !submission.member.postcode.blank? && submission.member.postcode.strip[0,2].upcase == 'LS'
-        user = intercom.users.create(basic_attributes.merge(user_id: submission.member.uuid))
-        submission.member.update(intercom_id: user.id)
-      else
-        lead = intercom.contacts.create(basic_attributes)
-        submission.member.update(intercom_id: lead.id)
-      end
+      user = intercom.users.create(basic_attributes.merge(user_id: submission.member.uuid))
+      submission.member.update(intercom_id: user.id)
     else
       submission.member.update(intercom_id: 'test_environment')
     end
