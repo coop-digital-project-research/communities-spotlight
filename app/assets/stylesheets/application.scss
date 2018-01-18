@@ -315,8 +315,14 @@ body.activities {
 
 section#how-it-works {
   display: flex;
+  justify-content: space-between;
   margin: 2rem 0;
   div {
+    flex-grow: 1;
+    flex-basis: 0;
+    img {
+      width: 90%;
+    }
     p {
       font-family:"AvenirNextLTW01-Medium";
 
