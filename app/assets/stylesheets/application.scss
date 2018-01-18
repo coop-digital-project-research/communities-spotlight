@@ -352,12 +352,15 @@ body.proposition-page {
     margin-bottom: 4rem;
     @media (min-width: 720px) {
       padding: 4rem 2rem;
+      margin-left: -4rem;
+      width: calc(100% + 8rem);
     }
     div.neighbourhood-where {
       background: $white;
       padding: 1rem;
       max-width: 28rem;
       @media (min-width: 720px) {
+        margin-left: 2rem;
         padding: 2rem;
       }
     }
