@@ -4,12 +4,19 @@ class MembersController < ApplicationController
   end
 
   def create
-    member = Member.create!(
-      uuid: SecureRandom.hex(3),
-      source: cookies[:source] || 'anonymous'
-    )
-    submission = member.submissions.create!(uuid: SecureRandom.hex(3))
-    redirect_to submission_involvement_path(submission)
+    if params[:location].blank?
+      redirect_to new_member_path, flash: {error: 'Please enter a location'}
+    else
+      member = Member.create!(
+        uuid: SecureRandom.hex(3),
+        source: cookies[:source] || 'anonymous'
+      )
+      submission = member.submissions.create!(
+        uuid: SecureRandom.hex(3),
+        location: params[:location]
+      )
+      redirect_to submission_activities_path(submission)
+    end
   end
 
   def show

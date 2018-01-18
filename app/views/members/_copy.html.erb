@@ -10,7 +10,7 @@
   Ready to make something good?
 </p>
 
-<%= button_to 'Get started', get_started_path, class: 'btn btn-primary'%>
+<%= render 'form', get_started_path: get_started_path %>
 
 <section class="feature play">
   <p>
@@ -40,4 +40,4 @@
   </p>
 </footer>
 
-<%= button_to 'Get started', get_started_path, class: 'btn btn-primary'%>
+<%= render 'form', get_started_path: get_started_path %>

@@ -1,0 +1,8 @@
+<%= form_tag get_started_path do %>
+  <% if flash[:error] %>
+    <p class="message message-error"><%= flash[:error] %></p>
+  <% end %>
+  <%= label_tag :location, "TODO: where do you want to do stuff?" %>
+  <%= text_field_tag :location %>
+  <%= submit_tag "Get started", class: 'btn btn-primary'%>
+<% end %>
