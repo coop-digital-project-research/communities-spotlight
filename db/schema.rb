@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180118094422) do
+ActiveRecord::Schema.define(version: 20180118131510) do
 
   create_table "activities", force: :cascade do |t|
     t.string "name", null: false
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20180118094422) do
     t.datetime "updated_at", null: false
     t.text "activity_suggestion"
     t.boolean "final", default: false
+    t.string "location"
   end
 
 end

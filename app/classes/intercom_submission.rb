@@ -14,7 +14,7 @@ class IntercomSubmission
         email: form.email,
         custom_attributes: {
           latest_submission: submission.uuid,
-          postcode: submission.member.postcode,
+          location: submission.location,
           involvement: submission.involvement,
           activity_suggestion: submission.activity_suggestion
         }.merge(submission_interests)

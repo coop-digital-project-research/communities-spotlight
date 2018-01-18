@@ -183,3 +183,11 @@ $(document).ready(function(){
     map.fitBounds(bounds);
   }
 });
+
+$(document).ready(function(){
+  $('#activities-actions').hide();
+  $('#activities-intro button').click(function(){
+    $('#activities-intro').hide();
+    $('#activities-actions').show();
+  });
+});

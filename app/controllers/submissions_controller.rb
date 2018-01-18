@@ -13,7 +13,7 @@ class SubmissionsController < ApplicationController
     if @submission.finished?
       render :show
     else
-      redirect_to member_path(@submission.member)
+      redirect_to new_member_path
     end
   end
 
