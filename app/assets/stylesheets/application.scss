@@ -346,7 +346,7 @@ body.proposition-page {
         }
         @media (min-width: 720px) {
           padding-right: 2rem;
-          
+
         }
       }
     }
@@ -372,6 +372,9 @@ body.proposition-page {
       @media (min-width: 720px) {
         margin-left: 2rem;
         padding: 2rem;
+      }
+      p.helper-text {
+        margin-top: 0.4rem;
       }
     }
   }
