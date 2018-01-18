@@ -11,11 +11,7 @@ class SubmissionsController < ApplicationController
   def show
     @submission = Submission.find_by!(uuid: params[:id])
     if @submission.finished?
-      if @submission.member.anonymous?
-        render :show_anonymous
-      else
-        render :show
-      end
+      render :show
     else
       redirect_to member_path(@submission.member)
     end

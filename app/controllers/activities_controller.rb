@@ -27,8 +27,8 @@ class ActivitiesController < ApplicationController
   end
 
   def create
-    @submission.update!(activity_suggestion: params[:suggestion], finished: true)
-    redirect_to submission_path(@submission)
+    @submission.update!(activity_suggestion: params[:suggestion])
+    redirect_to submission_details_path(@submission)
   end
 
 end

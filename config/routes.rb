@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resource :distance, only: [:show, :update], controller: :distance
     resource :activities, only: [:show, :update, :new, :create]
     resource :postcode, only: [:show, :update], controller: :postcode
+    resource :details, only: [:show, :update]
   end
 
   resources :recommendations, only: :show

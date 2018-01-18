@@ -1,0 +1,46 @@
+<h1>
+  Meet the team
+</h1>
+
+<section class="cta">
+  <img src="<%= image_path 'bunting.svg' %>" alt="Bunting">
+
+  <%= form_for @details_form, as: :submission, url: submission_details_path(@submission), method: :put do |f| %>
+    <div class="team-avatars">
+      <img src="<%= image_path 'sophy.png' %>" class="assistant-avatar" alt="">
+      <img src="<%= image_path 'gavin.png' %>" class="assistant-avatar" alt="">
+      <img src="<%= image_path 'james-r.png' %>" class="assistant-avatar" alt="">
+      <img src="<%= image_path 'ian.png' %>" class="assistant-avatar" alt="">
+      <img src="<%= image_path 'helen.png' %>" class="assistant-avatar" alt="">
+      <img src="<%= image_path 'james-a.png' %>" class="assistant-avatar" alt="">
+    </div>
+
+    <h2>
+      Co-op Team
+    </h2>
+    <p>
+      So you want to get more involved with your neighbournood? <% unless @submission.interests.thumbs_up.empty? %>We’ll start finding ways for you to:<% end %>
+    </p>
+
+    <% unless @submission.interests.thumbs_up.empty? %>
+      <ul>
+        <%@submission.interests.thumbs_up.each do | interest | %>
+        <li>
+          <%=interest.activity.name%>
+        </li>
+        <%end%>
+      </ul>
+    <% end %>
+
+    <p>
+      Leave your contact details and one of us will be in touch very shortly.
+    </p>
+    <%= f.label :name, 'Your name' %>
+    <%= f.text_field :name, required: true%>
+
+    <%= f.label :email, 'Your email address' %>
+    <%= f.email_field :email, required: true%>
+
+    <%= f.submit 'Finish', class: 'btn btn-primary' %>
+  <% end %>
+</section>
