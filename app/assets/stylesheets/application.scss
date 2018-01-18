@@ -148,6 +148,12 @@ p.end-statement {
   line-height: 1.4;
 }
 
+.helper-text {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: $coop-grey;
+}
+
 fieldset {
   &.thumbs-up-down {
     input {
@@ -307,6 +313,35 @@ body.activities {
   }
 }
 
+section#how-it-works {
+  display: flex;
+  margin: 2rem 0;
+  div {
+    p {
+      font-family:"AvenirNextLTW01-Medium";
+
+    }
+  }
+}
+
+section#neighbourhood-map {
+  background: $coop-grey;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  @media (min-width: 720px) {
+    padding: 4rem 2rem;
+    margin-bottom: 4rem;
+  }
+  div.neighbourhood-where {
+    background: $white;
+    padding: 1rem;
+    max-width: 28rem;
+    @media (min-width: 720px) {
+      padding: 2rem;
+    }
+  }
+}
+
 body.recommendations-page {
 
   .central-layout {
@@ -366,12 +401,6 @@ body.recommendations-page {
 
   .large-7 {
     width: 100%;
-  }
-
-  .helper-text {
-    font-size: 0.8rem;
-    line-height: 1.6;
-    color: $coop-grey;
   }
 
   .info-warning {
