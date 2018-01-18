@@ -313,40 +313,57 @@ body.activities {
   }
 }
 
-section#how-it-works {
-  display: flex;
-  justify-content: space-between;
-  margin: 2rem 0;
-  div {
-    flex-grow: 1;
-    flex-basis: 0;
-    img {
-      width: 90%;
-    }
-    p {
-      font-family:"AvenirNextLTW01-Medium";
+body.proposition-page {
 
+  .large-7 {
+    width: 100%;
+  }
+
+  header#proposition-head,
+  section#how-it-works {
+    max-width: 48rem;
+  }
+
+  section#proposition-intro,
+  footer#why-coop {
+    max-width: 32rem;
+  }
+
+  section#how-it-works {
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 0;
+    div {
+      flex-grow: 1;
+      flex-basis: 0;
+      img {
+        width: 90%;
+      }
+      p {
+        font-family:"AvenirNextLTW01-Medium";
+        padding-right: 2rem;
+      }
     }
   }
-}
 
-section#neighbourhood-map {
-  background: $coop-grey;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  @media (min-width: 720px) {
-    padding: 4rem 2rem;
-    margin-bottom: 4rem;
-  }
-  div.neighbourhood-where {
-    background: $white;
+  section#neighbourhood-map {
+    background-image: image-url("leeds-map.svg");
     padding: 1rem;
-    max-width: 28rem;
+    margin-bottom: 4rem;
     @media (min-width: 720px) {
-      padding: 2rem;
+      padding: 4rem 2rem;
+    }
+    div.neighbourhood-where {
+      background: $white;
+      padding: 1rem;
+      max-width: 28rem;
+      @media (min-width: 720px) {
+        padding: 2rem;
+      }
     }
   }
 }
+
 
 body.recommendations-page {
 
