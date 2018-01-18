@@ -1,7 +1,7 @@
 Rails.application.config.spotlight = OpenStruct.new
 Rails.application.config.spotlight.activities = [
   "organise a sing-a-long movie night",
-  "start an a capella group",
+  "start an acapella group",
   "organise a battle of the bands",
   "grow a community garden",
   "plant some trees in the community",
