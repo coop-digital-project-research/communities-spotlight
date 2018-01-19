@@ -333,9 +333,30 @@ body.proposition-page {
     display: flex;
     justify-content: space-between;
     margin: 4rem 0;
+    counter-reset: steps;
     div {
+      position: relative;
       flex-grow: 1;
       flex-basis: 0;
+      &:after {
+        position: absolute;
+        top: -2rem;
+        left: 0;
+        counter-increment: steps;
+        content: counter(steps);
+        width: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        font-family: 'AvenirNextLTW01-Demi';
+        font-size: 0.8rem;
+        @media (min-width: 720px) {
+          text-align: center;
+          color: $white;
+          top: 0;
+          font-size: 1.2rem;
+        }
+
+      }
       img {
         width: 90%;
       }
