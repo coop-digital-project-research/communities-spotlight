@@ -2,10 +2,10 @@
 
   <% if @ups >= @required_interests %>
     <h1>Have we missed something?</h1>
-    <%= label_tag :suggestion, "Tell us about any other activity you'd like to do with other people in [your neighbourhood]. (You can skip this question.)." %>
+    <%= label_tag :suggestion, "Tell us about anything else you'd like to start with other people in [your neighbourhood]. (You can skip this question.)." %>
   <% else %>
     <h1>We're out of ideas!</h1>
-    <%= label_tag :suggestion, "That's all the activities we've listed - but it's not all the activities there are. Tell us what you'd like to do with other people in [your neighbourhood] (You can skip this question.)" %>
+    <%= label_tag :suggestion, "That's all the ideas we've listed - but we know that's not all there is. Tell us what you'd like to start with other people in [your neighbourhood] (You can skip this question.)" %>
   <% end %>
   <%= text_area_tag :suggestion %>
   <%= submit_tag 'Next', class: 'btn btn-primary' %>
