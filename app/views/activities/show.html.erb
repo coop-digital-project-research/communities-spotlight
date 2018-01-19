@@ -12,7 +12,7 @@
 
 <section id="activities-actions">
   <%= form_for @submission, url: submission_activities_path(@submission), method: :put do |f| %>
-    <h1>Come together with people in your area and &hellip;</h1>
+    <h1>Come together with people in your area and start to&hellip;</h1>
     <%= f.fields_for :interests, @interests do |interest_fields| %>
       <fieldset class="thumbs-up-down">
         <%= interest_fields.hidden_field :position %>
