@@ -314,6 +314,7 @@ body.activities {
 }
 
 body.scan {
+  padding: 2rem;
   .large-7 {
     width: 100%;
   }
@@ -324,10 +325,18 @@ body.scan {
   section.activity {
     display: flex;
     article {
-
     }
     aside {
+      width: 30%;
+      img {
+        &.organiser-avatar {
+          border-radius: 100%;
+        }
 
+      }
+      iframe {
+        width: 100%;
+      }
     }
   }
 
