@@ -327,14 +327,15 @@ body.scan {
     display: flex;
     justify-content: space-between;
     article {
-      width: 60%;
+      width: 56vw;
       p {
       }
     }
     aside {
-      width: 30%;
+      width: 30vw;
       img {
         &.organiser-avatar {
+          width: 50%;
           border-radius: 100%;
         }
       }
