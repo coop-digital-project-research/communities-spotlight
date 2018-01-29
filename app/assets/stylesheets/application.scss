@@ -314,6 +314,7 @@ body.activities {
 }
 
 body.scan {
+  font-size: 1.8vw;
   padding: 2rem;
   .large-7 {
     width: 100%;
@@ -325,6 +326,10 @@ body.scan {
   section.activity {
     display: flex;
     article {
+      width: 70%;
+      p {
+        padding-right: 0.2vw;
+      }
     }
     aside {
       width: 30%;
