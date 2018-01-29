@@ -321,6 +321,16 @@ body.scan {
     display: none;
   }
 
+  section.activity {
+    display: flex;
+    article {
+
+    }
+    aside {
+
+    }
+  }
+
   main#main {
     > footer {
       display: none;
