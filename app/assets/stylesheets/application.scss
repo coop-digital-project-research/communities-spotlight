@@ -325,10 +325,10 @@ body.scan {
 
   section.activity {
     display: flex;
+    justify-content: space-between;
     article {
-      width: 70%;
+      width: 60%;
       p {
-        padding-right: 0.2vw;
       }
     }
     aside {
