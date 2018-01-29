@@ -320,6 +320,12 @@ body.scan {
   header.header-main {
     display: none;
   }
+
+  main#main {
+    > footer {
+      display: none;
+    }
+  }
 }
 
 body.proposition-page {
