@@ -337,7 +337,9 @@ body.scan {
         &.organiser-avatar {
           border-radius: 100%;
         }
-
+      }
+      h2 {
+        font-size: 24px;
       }
       iframe {
         width: 100%;
